@@ -1,0 +1,24 @@
+<% # If @restaurant has no ID, tries to create, else tries to update %>
+
+<div class="container col-6 mx-auto">
+  <%= simple_form_for(restaurant) do |f| %>
+    <%= f.input :name %>
+    <%= f.input :address %>
+    <%= f.input :rating %>
+    <%= f.button :submit, class: "btn btn-primary" %>
+  <% end %>
+</div>
+
+<%# # OLD VERSION WITH FORM_FOR %>
+<%#= form_for(restaurant) do |f| %>
+  <%#= f.label :name %>
+  <%#= f.text_field :name %>
+
+  <%#= f.label :address %>
+  <%#= f.text_field :address %>
+
+  <%#= f.label :rating %>
+  <%#= f.number_field :rating %>
+
+  <%#= f.submit %>
+<%# end %>
